@@ -11,16 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div id="article_name" class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   <div class="field">
-   <%= f.label :Tag, "Tags (seperated by commas)" %><br>
+   <%= f.label :Tag, "Content Tags (seperated by commas)" %><br>
    <%= f.text_field :tag_list %>
   </div>
   </div>
