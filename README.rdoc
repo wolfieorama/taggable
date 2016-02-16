@@ -1,3 +1,6 @@
 == README
 
 Testing acts-as-taggable gem
+
+added testing acts-as-hashtaggable gem (old though not reliable )
+

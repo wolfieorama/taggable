@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'hashtags/',         to: 'hashtags#index',     as: :hashtags
+  get 'hashtags/:hashtag', to: 'hashtags#show',      as: :hashtag
+  # get 'hashtags/index,'
+  #
+  # get 'hashtags/show'
+
   get 'tags/:tag', to: 'articles#index', as: :tag
   resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
