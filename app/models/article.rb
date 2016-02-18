@@ -4,4 +4,8 @@ class Article < ActiveRecord::Base
 
   acts_as_taggable
   acts_as_taggable_on :tag_list
+
+  def week_number
+    Time.now.strftime("%U").to_i
+  end
 end
