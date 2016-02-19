@@ -8,4 +8,9 @@ class Article < ActiveRecord::Base
   def week_number
     Time.now.strftime("%U").to_i
   end
+
+  def last_articles_tag
+    a = self.week_number.pred
+    # self.where("week_number == a")
+  end
 end
