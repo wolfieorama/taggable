@@ -2,6 +2,8 @@ class Article < ActiveRecord::Base
   include SimpleHashtag::Hashtaggable
   hashtaggable_attribute :title
 
+  belongs_to :Week
+
   acts_as_taggable
   acts_as_taggable_on :tag_list
 
