@@ -11,15 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218101325) do
+ActiveRecord::Schema.define(version: 20160219114351) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.string   "content"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "week_number"
-  end
+# Could not dump table "articles" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "simple_hashtag_hashtaggings", force: :cascade do |t|
     t.integer "hashtag_id"
@@ -57,5 +52,11 @@ ActiveRecord::Schema.define(version: 20160218101325) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
+  create_table "weeks", force: :cascade do |t|
+    t.integer  "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
